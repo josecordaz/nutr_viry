@@ -1,5 +1,6 @@
 node {
     def app
+    def receiver_container
 
     stage('Clone repository'){
         /*Let's make sure we have the repository cloned to our workspace*/
@@ -38,6 +39,7 @@ node {
     }
 
     stage('Starting nutr_viry container') {
-        docker.image('josecordaz/nutr_viry:1.0').run('--name ntr_viry_c -p 8088:80 -d')
+        receiver_container.stop()
+        receiver_container = docker.image('josecordaz/nutr_viry:1.0').run('--name ntr_viry_c -p 8088:80 -d')
     }
 }
