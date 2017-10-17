@@ -50,11 +50,4 @@ node {
         docker.image('josecordaz/nutr_viry').run('--name ntr_viry_c -p 8088:80 -d')
     }
 
-    // post {
-    //     always {
-    //         script { 
-    //             receiver_container.stop()
-    //         }
-    //     }
-    // }
 }
