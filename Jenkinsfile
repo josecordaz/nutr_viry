@@ -38,8 +38,12 @@ node {
         }
     }
 
+    stage('Stoping nutr_viry if any'){
+        sh 'docker rm -f ntr_viry_c'
+    }
+
     stage('Starting nutr_viry container') {
-        docker.container("ntr_viry_c").stop();
+        // docker.container("ntr_viry_c").stop();
         receiver_container = docker.image('josecordaz/nutr_viry:1.0').run('--name ntr_viry_c -p 8088:80 -d')
     }
 
