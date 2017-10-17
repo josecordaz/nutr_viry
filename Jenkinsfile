@@ -33,7 +33,7 @@ node {
                     {
                         "channel": "#general",
                         "username": "webhookbot",
-                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}],  """+message+""",
+                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}],  """+message+"""",
                         "icon_emoji": ":jenkins_ci:"
                     }
                 ' 
