@@ -34,7 +34,7 @@ node {
                     {
                         "channel": "#general",
                         "username": "webhookbot",
-                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}],  ${env.GIT_COMMIT}",
+                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}], """+message+"""  ${env.GIT_COMMIT}",
                         "icon_emoji": ":jenkins_ci:"
                     }
                 ' 
