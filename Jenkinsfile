@@ -15,7 +15,7 @@ node {
 
     // System.out.println(listString);
 
-    print(currentBuild.changeSets)
+    print(params)
 
     stage('Slack notification build start'){
        sh """
