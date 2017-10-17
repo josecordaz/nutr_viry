@@ -37,7 +37,7 @@ node {
         }
     }
 
-    docker.image('josecordaz/nutr_viry:1.0').run('--name ntr_viry_c -p 8088:80 -d') {
+    docker.image('josecordaz/nutr_viry:1.0').run('--name ntr_viry_c -p 8088:80 -d') { c ->
         /* Run some tests which require MySQL */
         sh 'echo "Done :D"'
     }
