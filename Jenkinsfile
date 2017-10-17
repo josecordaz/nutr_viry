@@ -1,6 +1,20 @@
 node {
     def app
 
+    ArrayList<String> list = new ArrayList<String>();
+    list.add("one");
+    list.add("two");
+    list.add("three");
+
+    String listString = "";
+
+    for (String s : list)
+    {
+        listString += s + "\t";
+    }
+
+    System.out.println(listString);
+
     stage('Slack notification build start'){
        sh """
             curl -X POST 
@@ -9,7 +23,7 @@ node {
                     {
                         "channel": "#general",
                         "username": "webhookbot",
-                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}], ${env.GIT_COMMIT}",
+                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}], """+listString+""" ${env.GIT_COMMIT}",
                         "icon_emoji": ":jenkins_ci:"
                     }
                 ' 
