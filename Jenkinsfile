@@ -14,8 +14,7 @@ node {
     // }
 
     // System.out.println(listString);
-
-    print(scm.GIT_COMMIT)
+    sh "git log -1 --pretty=%B"
 
     stage('Slack notification build start'){
        sh """
