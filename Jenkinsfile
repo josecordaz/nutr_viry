@@ -33,7 +33,7 @@ node {
                     {
                         "channel": "#general",
                         "username": "webhookbot",
-                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}], \\n ${message}",
+                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}] \\n ${message}",
                         "icon_emoji": ":jenkins_ci:"
                     }
                 ' 
@@ -95,7 +95,7 @@ node {
                     {
                         "channel": "#general",
                         "username": "webhookbot",
-                        "text": "FINISHED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}], ${env.GIT_COMMIT}",
+                        "text": "FINISHED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
                         "icon_emoji": ":jenkins_ci:"
                     }
                 ' 
