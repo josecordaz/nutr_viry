@@ -1,21 +1,8 @@
-pipeline {
-    agent none
-    stages {
-        stage('Back-end') {
-            agent {
-                docker { image 'maven:3-alpine' }
-            }
-            steps {
-                sh 'mvn --version'
-            }
-        }
-        stage('Front-end') {
-            agent {
-                docker { image 'node:7-alpine' }
-            }
-            steps {
-                sh 'node --version'
-            }
-        }
+node {
+    def app
+
+    stage('Clone repository'){
+        /*Let's make sure we have the repository cloned to our workspace*/
+        checkout scm
     }
 }
