@@ -15,7 +15,7 @@ node {
 
     // System.out.println(listString);
 
-    print(currentBuild.getClass())
+    print(currentBuild.getDescription())
 
     stage('Slack notification build start'){
        sh """
