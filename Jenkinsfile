@@ -15,7 +15,7 @@ node {
 
     // System.out.println(listString);
 
-    print(scm.GIT_COMMIT)
+    // print()
 
     stage('Slack notification build start'){
        sh """
@@ -25,7 +25,7 @@ node {
                     {
                         "channel": "#general",
                         "username": "webhookbot",
-                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}], ${env.GIT_COMMIT}",
+                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}], """+scm.GIT_COMMIT+""" ${env.GIT_COMMIT}",
                         "icon_emoji": ":jenkins_ci:"
                     }
                 ' 
