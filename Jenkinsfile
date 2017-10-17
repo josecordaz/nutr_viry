@@ -14,7 +14,17 @@ node {
     // }
 
     // System.out.println(listString);
-    sh "git log -1 --pretty=%B"
+    def message
+
+    stage('Clone repository'){
+        /*Let's make sure we have the repository cloned to our workspace*/
+        checkout scm
+        message = sh ( 
+            script: 'sh \"git log -1 --pretty=%B\"', 
+            returnStdout: true 
+        ).trim(); 
+    }
+
 
     stage('Slack notification build start'){
        sh """
@@ -24,7 +34,7 @@ node {
                     {
                         "channel": "#general",
                         "username": "webhookbot",
-                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}],  ${env.GIT_COMMIT}",
+                        "text": "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}],  """+message+""",
                         "icon_emoji": ":jenkins_ci:"
                     }
                 ' 
@@ -32,10 +42,7 @@ node {
         """.replaceAll("\n", "")
     }
 
-    stage('Clone repository'){
-        /*Let's make sure we have the repository cloned to our workspace*/
-        checkout scm
-    }
+    
 
     stage('Build image'){
         /*
