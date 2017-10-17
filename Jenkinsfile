@@ -17,7 +17,6 @@ node {
 
     print(scm.GIT_COMMIT)
 
-
     stage('Slack notification build start'){
        sh """
             curl -X POST 
