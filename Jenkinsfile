@@ -22,7 +22,7 @@ node {
     }
 
     stage('Getting github message'){
-        message = sh ( script: 'sh \"git log -1 --pretty=%B\"', returnStdout: true).trim(); 
+        message = sh ( script: 'sh \"git log -1 --pretty=%B\"', returnStdout: false).trim(); 
     }
 
     stage('Slack notification build start'){
