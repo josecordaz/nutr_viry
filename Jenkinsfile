@@ -66,4 +66,20 @@ node {
         docker.image('josecordaz/nutr_viry').run('--name ntr_viry_c -p 8088:80 -d')
     }
 
+    stage('Slack notification build finished'){
+       sh """
+            curl -X POST 
+                --data-urlencode 
+                'payload=
+                    {
+                        "channel": "#general",
+                        "username": "webhookbot",
+                        "text": "FINISHED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}], ${env.GIT_COMMIT}",
+                        "icon_emoji": ":jenkins_ci:"
+                    }
+                ' 
+                https://hooks.slack.com/services/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
+        """.replaceAll("\n", "")
+    }
+
 }
