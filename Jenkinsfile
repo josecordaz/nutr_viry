@@ -41,9 +41,9 @@ node {
         sh 'docker rm -f ntr_viry_c'
     }
 
-    stage('Pulling changes'){
-        docker.image('josecordaz/nutr_viry:1.0').pull();
-    }
+    // stage('Pulling changes'){
+    //     docker.image('josecordaz/nutr_viry:1.0').pull();
+    // }
 
     stage('Starting nutr_viry container') {
         // docker.container("ntr_viry_c").stop();
