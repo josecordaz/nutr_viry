@@ -1,19 +1,5 @@
 node {
     def app
-
-    // ArrayList<String> list = new ArrayList<String>();
-    // list.add("one");
-    // list.add("two");
-    // list.add("three");
-
-    // String listString = "";
-
-    // for (String s : list)
-    // {
-    //     listString += s + "\t";
-    // }
-
-    // System.out.println(listString);
     def message
 
     stage('Clone repository'){
@@ -39,9 +25,7 @@ node {
                 ' 
                 https://hooks.slack.com/services/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
         """.replaceAll("\n", "")
-    }
-
-    
+    }    
 
     stage('Build image'){
         /*
