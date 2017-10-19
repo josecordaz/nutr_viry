@@ -25,7 +25,15 @@ node {
                 ' 
                 https://hooks.slack.com/services/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
         """.replaceAll("\n", "")
-    }    
+    }
+
+    stage('Get npm packages'){
+        sh 'npm i'
+    }
+
+    stage('Build prod files'){
+        sh 'npm run build'
+    }
 
     stage('Build image'){
         /*
