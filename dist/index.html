@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="esp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Nutr Viry</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            let ant_enf_fam = [
+                "Sobre peso",
+                "Diabetes",
+                "Triglicéridos",
+                "Colesterol",
+                "Acido Úrico",
+                "Cirrosis",
+                "Hipertensión",
+                "I. Renal",
+                "Cálculos Biliares",
+                "Enf. Respiratorias",
+                "Cáncer"
+            ]
+
+            let ant_per_pat = [
+                "Sobre peso",
+                "Diabetes",
+                "Triglicéridos",
+                "Colesterol",
+                "Acido Úrico",
+                "Cirrosis",
+                "HTA",
+                "Renal",
+                "Cálculos Biliares",
+                "Enf. Respiratorias",
+                "Cáncer Hepatitis",
+                "Reflujo",
+                "Colitis",
+                "Gastritis",
+                "Anemia",
+                "Alergias alimento",
+                "Ulceras"
+            ]
+
+            let ant_per_no_pat = [
+                "Problemas de masticación",
+                "Acidez",
+                "Problemas para pasar alimentos",
+                "Diarrea",
+                "Nauseas",
+                "Vómito",
+                "Estreñimiento",
+                "Mareos"
+            ]
+
+            function addItem (text) {
+                let div = document.createElement('div');
+
+                let label = document.createElement('label');
+                label.innerHTML = text;
+
+                let input = document.createElement('input');
+                input.type = 'checkbox';
+
+                let br = document.createElement('br');
+
+                div.appendChild(label);
+                div.appendChild(input);
+                div.appendChild(br);
+
+                document.querySelector('body').appendChild(div);
+            }
+
+            function addSubtitle(title){
+                let h4 = document.createElement('h4');
+                h4.innerHTML = title;
+                document.querySelector('body').appendChild(h4);
+            }
+
+            addSubtitle("Antecedentes de enfermedades Familiares");
+            ant_enf_fam.forEach(addItem);
+            addSubtitle("Antecedentes personales patológicos");
+            ant_per_pat.forEach(addItem);
+            addSubtitle("Antecedentes personales no patológicos");
+            ant_per_no_pat.forEach(addItem);
+        </script>
+        <br>
+        <label for="cirugias">Cirugías</label>
+        <input type="text" name="cirugias" id="cirugias">
+        <br>
+        <label for="med_actuales">Medicamentos actuales</label>
+        <input type="text" name="med_actuales" id="med_actuales">
+        <br>
+        <label for="sup_comp">Suplementos y complementos</label>
+        <input type="text" name="sup_comp" id="sup_comp">
+        <br>
+        <label for="fecha_ult_mes">Fecha de ultima menstruación</label>
+        <input type="date" name="fecha_ult_mes" id="fecha_ult_mes">
+        <br>
+        <label for="dur_ciclo">Duración del ciclo</label>
+        <input type="number" name="dur_ciclo" id="dur_ciclo">
+        <br>
+        <label for="met_anti">Métodos anticonceptivos</label>
+        <input type="text" name="met_anti" id="met_anti">
+        <br>
+        <label for="deporte">¿Practica algún deporte o actividad física?</label>
+        <input type="text" name="deporte" id="deporte">
+        <br>
+        <script>
+            let alimentos_semana = [
+                "Leche",
+                "Pollo",
+                "Carne",
+                "Huevo",
+                "Queso",
+                "Yogurt",
+                "Pan",
+                "Tortilla",
+                "Pastelitos",
+                "Pastas",
+                "Cereal de caja",
+                "Frijol",
+                "Soya",
+                "Verduras",
+                "Frutas",
+                "Chorizo",
+                "Tocino",
+                "Almendras, nuez, cacahuate",
+                "Refresco",
+                "Dulces"
+            ]
+            addSubtitle("Cuantas veces por semana consume estos alimentos");
+            alimentos_semana.forEach(addItem);
+            addSubtitle("Recordatorio de 24 Horas");
+        </script>
+        <table>
+            <thead>
+                <tr>
+                   <th>DESAYUNO</th>
+                   <th>COLACIÓN</th>
+                   <th>Comida</th>
+                   <th>Colación</th>
+                   <th>Cena</th>
+                </tr>
+            </thead>
+            <!--tfoot>
+                <tr>
+                    <td>Sum</td>
+                    <td>$180</td>
+                </tr>
+            </tfoot-->
+            <tbody>
+                <tr>
+                   <td><input type="datetime-local"></td>
+                   <td><input type="datetime-local"></td>
+                   <td><input type="datetime-local"></td>
+                   <td><input type="datetime-local"></td>
+                   <td><input type="datetime-local"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <label for="man_ace">¿Cocina con Manteca o Aceite?</label>
+        <input type = "text" name = "man_ace" id = "man_ace">
+        <br>
+        <label for="agua">Consumo de agua natural al día</label>
+        <input type = "number" name = "agua" id = "agua">
+        <br>
+        <label for="agua">Objetivo de su consulta</label>
+        <input type = "text" name = "agua" id = "agua">
+        <script src="https://s3.amazonaws.com/stitch-sdks/js/library/stable/stitch.min.js"></script>
+        <!--cript>
+          const client = new stitch.StitchClient('scripts-db-qbopb');
+          const db = client.service('mongodb', 'mongodb-atlas').db('nutr_viry');
+          client.login().then(() =>
+            db.collection('clients').updateOne({owner_id: client.authedId()}, {$set:{number:42}}, {upsert:true})
+          ).then(()=>
+            db.collection('clients').find({owner_id: client.authedId()})
+          ).then(docs => {
+            console.log("Found docs", docs)
+            console.log("[MongoDB Stitch] Connected to Stitch")
+          }).catch(err => {
+            console.error(err)
+          });
+        </script-->
+    <script type="text/javascript" src="app.bundle.js"></script></body>
+</html>
