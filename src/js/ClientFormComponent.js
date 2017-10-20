@@ -1,6 +1,7 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import DatePicker from 'material-ui/DatePicker';
  
 const ClientFormComponent = () => (
   <form>
@@ -8,6 +9,11 @@ const ClientFormComponent = () => (
       <br/>
       <TextField floatingLabelText="Edad" type="number"/>
       <br/>
+      <DatePicker floatingLabelText="Fecha de Nacimiento" />
+      <br/>
+      <TextField floatingLabelText="Ocupación"/>
+      <br/>
+      <TextField floatingLabelText="Teléfono"/>
       <RaisedButton label="Default"/>
   </form>
 );
