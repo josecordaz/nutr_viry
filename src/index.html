@@ -9,22 +9,6 @@
     </head>
     <body>
         <div id="app"></div>
-        <h3>HISTORIAL CLINICO-NUTRICIA</h3>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
-            <br>
-            <label for="edad">Edad</label>
-            <input type="number" name="edad" id="edad">
-            <br>
-            <label for="fecha">Fecha</label>
-            <input type="date" name="fecha" id="fecha">
-            <br>
-            <label for="ocupacion">Ocupación</label>
-            <input type="text" name="ocupacion" id="ocupacion">
-            <br>
-            <label for="telefono">Teléfono</label>
-            <input type="text" name="telefono" id="telefono">
-            <br>
         <script>
             let ant_enf_fam = [
                 "Sobre peso",
@@ -169,55 +153,25 @@
             </tfoot-->
             <tbody>
                 <tr>
-                   <td>
-                    <input type="datetime-local">
-                   </td>
-                   <td>
-                    <input type="datetime-local">
-                   </td>
-                   <td>
-                    <input type="datetime-local">
-                   </td>
-                   <td>
-                    <input type="datetime-local">
-                   </td>
-                   <td>
-                    <input type="datetime-local">
-                   </td>
+                   <td><input type="datetime-local"></td>
+                   <td><input type="datetime-local"></td>
+                   <td><input type="datetime-local"></td>
+                   <td><input type="datetime-local"></td>
+                   <td><input type="datetime-local"></td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
                 </tr>
             </tbody>
         </table>
@@ -230,5 +184,20 @@
         <br>
         <label for="agua">Objetivo de su consulta</label>
         <input type = "text" name = "agua" id = "agua">
+        <script src="https://s3.amazonaws.com/stitch-sdks/js/library/stable/stitch.min.js"></script>
+        <!--cript>
+          const client = new stitch.StitchClient('scripts-db-qbopb');
+          const db = client.service('mongodb', 'mongodb-atlas').db('nutr_viry');
+          client.login().then(() =>
+            db.collection('clients').updateOne({owner_id: client.authedId()}, {$set:{number:42}}, {upsert:true})
+          ).then(()=>
+            db.collection('clients').find({owner_id: client.authedId()})
+          ).then(docs => {
+            console.log("Found docs", docs)
+            console.log("[MongoDB Stitch] Connected to Stitch")
+          }).catch(err => {
+            console.error(err)
+          });
+        </script-->
     </body>
 </html>
