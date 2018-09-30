@@ -65,3 +65,7 @@ body{
 }
 
 /* 6c9a6a */
+
+.modal .form-group button {
+    margin-top: 8px;
+}

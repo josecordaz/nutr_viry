@@ -22,9 +22,9 @@
             <!--a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41" alt="logo"></a-->
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><i class="fas fa-pencil-ruler fa-lg"></i> Evaluación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> Información</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./evaluacion.html"><i class="fas fa-pencil-ruler fa-lg"></i> Evaluaci&oacute;n</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> Informaci&oacute;n</a></li>
                 </ul>
                 <span class="navbar-text">
                     <a data-toggle="modal" data-target="#loginModal">
@@ -34,7 +34,388 @@
             </div>
         </div>
     </nav>
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="addClientModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Agregar cliente</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                <form class="col-12">
+                    <div class="form-row">
+                        <div class="form-group col-sm-3">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label for="edad">Edad</label>
+                            <input type="number" class="form-control" id="edad">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="ocupacion">Ocupaci&oacute;n</label>
+                            <input type="text" class="form-control" id="ocupacion">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="telefono">Tel&eacute;fono</label>
+                            <input type="tel" class="form-control" id="telefono">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="nosmoking">Sexo</label>
+                            <div class="input-group">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-primary active">
+                                        <input type="radio" name="options" id="nosmoking" checked> Hombre
+                                    </label>
+                                    <label class="btn btn-pink">
+                                        <input type="radio" name="options" id="smoking"> Mujer
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="form-row row-content">
+                            <label>Antecedentes de enfermedades familiares</label>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Sobre peso</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Diabetes</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Triglic&eacute;ridos</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Colesterol</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">&Aacute;cido &Uacute;rico</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Cirrosis</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Hipertensi&oacute;n</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">I Renal</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">C&aacute;lculos Biliares</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Enf Respiratorias</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">C&aacute;ncer</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row row-content">
+                            <label>Antecedentes personales patol&oacute;gicos</label>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Sobre peso</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Diabetes</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Triglic&eacute;ridos</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox15" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Colesterol</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox16" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">&Aacute;cido &Uacute;rico</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox17" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Cirrosis</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox18" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Hipertensi&oacute;n</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox19" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">I Renal</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox20" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">C&aacute;lculos Biliares</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox21" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Enf Respiratorias</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox22" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">C&aacute;ncer</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox23" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Hepatitis</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox24" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Reflujo</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox25" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Colitis</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox26" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Gastritis</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox27" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Anemia</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox28" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Alergias alimento</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox29" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Ulceras</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row row-content">
+                            <label>Antecedentes personales no patol&oacute;gicos</label>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox30" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Problemas de masticaci&oacute;n</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox31" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Acidez</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox32" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Problemas para pasar alimentos</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox33" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Diarrea</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox34" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Nauseas</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox35" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">V&oacute;mito</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox36" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Estre&ntilde;imiento</label>
+                                </div>
+                                <div class="form-check form-check-inline col-sm-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox37" value="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Mareos</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="cirugia">Cirug&iacute;as</label>
+                                <input type="text" class="form-control" id="cirugia">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="medi">Medicamentos actuales</label>
+                                <input type="number" class="form-control" id="medi">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="sup_comple">Suplementos y complementos</label>
+                                <input type="text" class="form-control" id="sup_comple">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="practicadep">Practica alg&uacute;n deporte?</label>
+                                <input type="tel" class="form-control" id="practicadep">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="row">Cuatas veces por semana consume estos alimentos</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="leche">
+                            </div>
+                            <label for="leche" class="col-sm-2 col-form-label">Leche</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="pollo">
+                            </div>
+                            <label for="pollo" class="col-sm-2 col-form-label">Pollo</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="carne">
+                            </div>
+                            <label for="carne" class="col-sm-2 col-form-label">Carne</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="huevo">
+                            </div>
+                            <label for="huevo" class="col-sm-2 col-form-label">Huevo</label>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="queso">
+                            </div>
+                            <label for="queso" class="col-sm-2 col-form-label">Queso</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="yogurt">
+                            </div>
+                            <label for="yogurt" class="col-sm-2 col-form-label">Yogurt</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="pan">
+                            </div>
+                            <label for="pan" class="col-sm-2 col-form-label">Pan</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="tortilla">
+                            </div>
+                            <label for="tortilla" class="col-sm-2 col-form-label">Tortilla</label>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="pastelitos">
+                            </div>
+                            <label for="pastelitos" class="col-sm-2 col-form-label">Pastelitos</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="pastas">
+                            </div>
+                            <label for="pastas" class="col-sm-2 col-form-label">Pastas</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="cerealcaja">
+                            </div>
+                            <label for="cerealcaja" class="col-sm-2 col-form-label">Cereal de caja</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="frijol">
+                            </div>
+                            <label for="frijol" class="col-sm-2 col-form-label">Frijol</label>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="soya">
+                            </div>
+                            <label for="soya" class="col-sm-2 col-form-label">Soya</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="verdura">
+                            </div>
+                            <label for="verdura" class="col-sm-2 col-form-label">Verduras</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="frutas">
+                            </div>
+                            <label for="frutas" class="col-sm-2 col-form-label">Frutas</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="chorizo">
+                            </div>
+                            <label for="chorizo" class="col-sm-2 col-form-label">Chorizo</label>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="tocino">
+                            </div>
+                            <label for="tocino" class="col-sm-2 col-form-label">Tocino</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="almen">
+                            </div>
+                            <label for="almen" class="col-sm-2 col-form-label">Almendras,nuez...</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="refresco">
+                            </div>
+                            <label for="refresco" class="col-sm-2 col-form-label">Refresco</label>
+                            <div class="col-sm-1">
+                                <input type="number" class="form-control" id="dulces">
+                            </div>
+                            <label for="dulces" class="col-sm-2 col-form-label">Dulces</label>
+                        </div>
+                        <div class="form-row row-content">
+                            <div class="form-group col-sm-2">
+                                <label for="des">Desayuno</label>
+                                <input type="text" class="form-control" id="des">
+                                <button type="button" class="btn btn-primary">Agregar</button>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="col1">Colaci&oacute;n</label>
+                                <input type="text" class="form-control" id="col1">
+                                <button type="button" class="btn btn-primary">Agregar</button>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="comi">Comida</label>
+                                <input type="text" class="form-control" id="comi">
+                                <button type="button" class="btn btn-primary">Agregar</button>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="col2">Colaci&oacute;n</label>
+                                <input type="text" class="form-control" id="col2">
+                                <button type="button" class="btn btn-primary">Agregar</button>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="cen">Cena</label>
+                                <input type="text" class="form-control" id="cen">
+                                <button type="button" class="btn btn-primary">Agregar</button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="cocmanace">Cocina con Manteca o Aceite</label>
+                                <input type="text" class="form-control" id="cocmanace">
+                                <button type="button" class="btn btn-primary">Guardar</button>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="agua">Consumo de agua natural al d&iacute;a</label>
+                                <input type="number" class="form-control" id="agua">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="objetivo">Objetivo de su consulta</label>
+                                <input type="number" class="form-control" id="objetivo">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -70,7 +451,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div-->
     <div class="container">
         <div class="row row-content">
             <div class="col-12">
@@ -80,7 +461,9 @@
                         <div class="col-md-4">
                             <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
                         </div>
-                        <button class="col-12 col-md-4 btn btn-primary">Agregar cliente</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addClientModal">
+                            Agregar cliente
+                        </button>
                     </div>
                 </form>
             </div>
@@ -89,21 +472,21 @@
             <div class="col-6">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Jose Carlos Ordaz Crizantos
+                        Name of people 1
                         <div>
                             <i class="fas btn fa-pencil-ruler fa-lg"></i>
                             <i class="fa btn fa-info fa-lg"></i>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Paulina Lupian Gálvez
+                        Name of people 2
                         <div>
                             <i class="fas btn fa-pencil-ruler fa-lg"></i>
                             <i class="fa btn fa-info fa-lg"></i>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Mariana Ordaz Lupian
+                        Name of people 3
                         <div>
                             <i class="fas btn fa-pencil-ruler fa-lg"></i>
                             <i class="fa btn fa-info fa-lg"></i>
@@ -112,588 +495,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row row-content">
-            <div class="col-12 table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>  
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Talla</th>
-                            <th scope="col">Peso</th>
-                            <th scope="col">% Grasa</th>
-                            <th scope="col">% Musculo</th>
-                            <th scope="col">E. Metabolica</th>
-                            <th scope="col">G. Visc.</th>
-                            <th scope="col">IMC</th>
-                            <th scope="col">Cintura</th>
-                            <th scope="col">Abdomen</th>
-                            <th scope="col">Cadera</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <!--th scope="row">1</th-->
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>0%</td>
-                            <td>0%</td>
-                            <td>0</td>
-                            <td>0%</td>
-                            <td>20</td>
-                            <td>85</td>
-                            <td>87</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>0%</td>
-                            <td>0%</td>
-                            <td>0</td>
-                            <td>0%</td>
-                            <td>20</td>
-                            <td>85</td>
-                            <td>87</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>0%</td>
-                            <td>0%</td>
-                            <td>0</td>
-                            <td>0%</td>
-                            <td>20</td>
-                            <td>85</td>
-                            <td>87</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>0%</td>
-                            <td>0%</td>
-                            <td>0</td>
-                            <td>0%</td>
-                            <td>20</td>
-                            <td>85</td>
-                            <td>87</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>0%</td>
-                            <td>0%</td>
-                            <td>0</td>
-                            <td>0%</td>
-                            <td>20</td>
-                            <td>85</td>
-                            <td>87</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>0%</td>
-                            <td>0%</td>
-                            <td>0</td>
-                            <td>0%</td>
-                            <td>20</td>
-                            <td>85</td>
-                            <td>87</td>
-                            <td>90</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </div>
-
-    <div class="container">
-        <div class="row row-content">
-            <form class="col-12">
-                <div class="form-row">
-                    <div class="form-group col-sm-3">
-                        <label for="inputEmail4">Nombre</label>
-                        <input type="text" class="form-control" id="nombre">
-                    </div>
-                    <div class="form-group col-sm-2">
-                        <label for="inputEmail4">Edad</label>
-                        <input type="number" class="form-control" id="edad">
-                    </div>
-                    <div class="form-group col-sm-3">
-                        <label for="inputEmail4">Ocupación</label>
-                        <input type="text" class="form-control" id="ocupacion">
-                    </div>
-                    <div class="form-group col-sm-3">
-                        <label for="inputEmail4">Teléfono</label>
-                        <input type="tel" class="form-control" id="telefono">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputEmail4">Sexo</label>
-                        <div class="input-group">
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-primary active">
-                                    <input type="radio" name="options" id="nosmoking" autocomplete="off" checked> Hombre
-                                </label>
-                                <label class="btn btn-pink">
-                                    <input type="radio" name="options" id="smoking" autocomplete="off"> Mujer
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row row-content">
-                    <label>Antecedentes de enfermedades familiares</label>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Sobre peso</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Diabetes</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Triglicéridos</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Colesterol</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Ácido Úrico</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Cirrosis</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Hipertensión</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">I Renal</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Cálculos Biliares</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Enf Respiratorias</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Cáncer</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row row-content">
-                    <label>Antecedentes personales patológicos</label>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Sobre peso</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Diabetes</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Triglicéridos</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Colesterol</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Ácido Úrico</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Cirrosis</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Hipertensión</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">I Renal</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Cálculos Biliares</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Enf Respiratorias</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Cáncer</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Hepatitis</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Reflujo</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Colitis</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Gastritis</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Anemia</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Alergias alimento</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Ulceras</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row row-content">
-                    <label>Antecedentes personales no patológicos</label>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Problemas de masticación</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Acidez</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Problemas para pasar alimentos</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Diarrea</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-12">
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Nauseas</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Vómito</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Estreñimiento</label>
-                        </div>
-                        <div class="form-check form-check-inline col-sm-2">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">Mareos</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-sm-4">
-                        <label for="inputEmail4">Cirugías</label>
-                        <input type="text" class="form-control" id="nombre">
-                    </div>
-                    <div class="form-group col-sm-4">
-                        <label for="inputEmail4">Medicamentos actuales</label>
-                        <input type="number" class="form-control" id="edad">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-sm-4">
-                        <label for="inputEmail4">Suplementos y complementos</label>
-                        <input type="text" class="form-control" id="ocupacion">
-                    </div>
-                    <div class="form-group col-sm-4">
-                        <label for="inputEmail4">Practica algún deporte?</label>
-                        <input type="tel" class="form-control" id="telefono">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <label class="row">Cuatas veces por semana consume estos alimentos</label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Leche</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Pollo</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Carne</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Huevo</label>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Queso</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Yogurt</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Pan</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Tortilla</label>
-                </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Pastelitos</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Pastas</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Cereal de caja</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Frijol</label>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Soya</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Verduras</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Frutas</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-1 col-form-label">Chorizo</label>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Tocino</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Almendras,nuez,cacahuate</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Refresco</label>
-                    <div class="col-sm-1">
-                        <input type="number" class="form-control" id="staticEmail">
-                    </div>
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Dulces</label>
-                </div>
-            </form>
-            <!--form class="col-12">
-                <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    </div>
-                </div>
-            </form-->
-        </div>
-    </div>
-
-    
-
-    <!--div class="container">
-        <div class="row row-content">
-            <div class="col">
-                <div id="mycarousel23" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#mycarousel23" data-slide-to="0" class="active"></li>
-                        <li data-target="#mycarousel23" data-slide-to="1"></li>
-                        <li data-target="#mycarousel23" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox" >
-                        <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
-                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/buffet.png" alt="Buffet">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                                <p  class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/alberto.png" alt="Alberto">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>Alberto Somayya</h2>
-                                <h4>Executive Chef</h4>
-                                <p  class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#mycarousel23" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#mycarousel23" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
-        </div>
-
-        <div class="row  row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthappizza">
-                    <div class="media-body">
-                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row  row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
-            </div>
-            <div class="col col-sm col-md">
-                <div class="media">
-                    <div class="media-body">
-                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                        <p  class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                    </div>
-                    <img class="d-flex img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
-                </div>
-            </div>
-        </div>
-
-        <div class="row  row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="alberto">
-                    <div class="media-body">
-                            <h2>Alberto Somayya</h2>
-                            <h4>Executive Chef</h4>
-                            <p  class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>  
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div-->
-
-    <!--footer class="footer">
-        <div class="container">
-            <div class="row row-content">
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="./contactus.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-		              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fab fa-google-plus-square fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fab fa-facebook fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fab fa-linkedin fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-google " href="http://youtube.com/"><i class="fab fa-youtube fa-lg"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
-                    </div>
-                </div>
-           </div>
-           <div class="row  justify-content-center">             
-                <div class="col-auto">
-                    <p>&copy; Copyright 2018 Ristorante Con Fusion</p>
-                </div>
-           </div>
-        </div>
-    </footer-->
 <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
